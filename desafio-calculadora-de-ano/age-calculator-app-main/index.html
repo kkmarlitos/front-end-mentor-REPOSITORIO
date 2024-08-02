@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylecalc.css">
+  <link rel="stylesheet" href="PCstyle.css" media="screen and (min-width: 1100px)">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.3.0/luxon.min.js"></script>
+  <title>Age calculator</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+      <main>
+          <form>
+            <fieldset>
+              <legend>DAY</legend>
+              <input type="number" name="dia" id="dia" required>
+              <p class="erro"></p>
+            </fieldset>
+
+            <fieldset>
+              <legend>MONTH</legend>
+              <input type="number" name="mes" id="mes" required>
+              <p class="erro"></p>
+            </fieldset>
+
+            <fieldset>
+              <legend>YEAR</legend>
+              <input type="number" name="ano" id="ano">
+              <p class="erro"></p>
+            </fieldset>
+          </form>
+          <div id="estilo">
+  
+            <img src="images/icon-arrow.svg" alt="submit" onclick="clicar()">
+  
+          </div>
+
+          <p><strong>- -</strong> years</p>
+          <p><strong>- -</strong> months</p>
+          <p><strong>- -</strong> days</p>
+
+          <script>
+          var mes_input = document.getElementById('mes')
+          var dia_input = document.getElementById('dia')
+          var ano_input = document.getElementById('ano')
+
+          var data_atual = new Date()
+          var mes_atual = data_atual.getMonth() + 1
+          var dia_atual = data_atual.getDate()
+          var ano_atual = data_atual.getFullYear()
+
+          var erro_preenchimento1 = document.getElementsByTagName('p')[0]
+          var erro_preenchimento2 = document.getElementsByTagName('p')[1]
+          var erro_preenchimento3 = document.getElementsByTagName('p')[2]
+          var input_error1 = document.getElementsByTagName('input')[0]
+          var input_error2 = document.getElementsByTagName('input')[1]
+          var input_error3 = document.getElementsByTagName('input')[2]
+
+          var anos_strong = document.getElementsByTagName('strong')[0]
+          var meses_strong = document.getElementsByTagName('strong')[1]
+          var dias_strong = document.getElementsByTagName('strong')[2]
+
+          function clicar(){
+
+          //erro dia
+          if (dia_input.value == 0 || dia_input.value > 31 || mes_input.value == 0 ||mes_input.value > 12 || ano_input.value == 0 || ano_input.value > ano_atual) {
+          if (dia_input.value == 0 || dia_input.value > 31){
+            switch(true){
+              case dia_input.value == 0: 
+                erro_preenchimento1.innerHTML = 'this field is required'
+                input_error1.style.border = '2px solid red'
+               break
+              case dia_input.value > 31: 
+                erro_preenchimento1.innerHTML = 'Must be a valid day'
+                input_error1.style.border = '2px solid red'
+               break
+              default:
+            }
+          }else{
+            erro_preenchimento1.innerText = ''
+            input_error1.style.border = '2px solid black'
+          }
+
+          //erro mes
+          if (mes_input.value == 0 || mes_input.value > 12 ){
+            switch(true){
+              case mes_input.value == 0: 
+               erro_preenchimento2.innerText = 'this field is required'
+               input_error2.style.border = '2px solid red'
+               break
+              case mes_input.value > 12: 
+               erro_preenchimento2.innerText = 'Must be a valid month'
+               input_error2.style.border = '2px solid red'
+               break
+              default:
+            }
+          }else{
+              erro_preenchimento2.innerText = ''
+              input_error2.style.border = '2px solid black'
+          }
+
+          //erro ano
+          if(ano_input.value == 0 || ano_input.value > ano_atual){
+          switch(true){
+            case ano_input.value == 0: 
+              erro_preenchimento3.innerText = 'this field is required'
+              input_error3.style.border = '2px solid red'
+             break 
+            case ano_input.value > ano_atual: 
+              erro_preenchimento3.innerText = 'Must be in the past'
+              input_error3.style.border = '2px solid red'
+             break
+            default:
+          }
+        }else{
+          erro_preenchimento3.innerText = ''
+          input_error3.style.border = '2px solid black'
+              }
+            }
+          else{
+              //calculo
+              const data_atual_luxon = luxon.DateTime.now()
+              const diminuir_idade = data_atual_luxon.minus({ day: dia_input.value, year: ano_input.value, month: mes_input.value })
+            dias_strong.textContent = diminuir_idade.day
+            meses_strong.textContent = diminuir_idade.month
+            anos_strong.textContent = diminuir_idade.year
+          }
+          }
+
+          </script>
+      </main>
+</body>
+</html>

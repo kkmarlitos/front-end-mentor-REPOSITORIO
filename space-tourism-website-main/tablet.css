@@ -1,0 +1,25 @@
+header{
+    background-color: white;
+}
+nav{
+    display: flex;
+    
+    transform: translate(0px);
+    transition: none;
+    font-size: 3vw;
+    width: 70vw;
+    height: 15vw;
+    padding-top: 0px;
+    background-image: none;
+    background-color: #45556e62;
+}
+nav p{
+    margin: 6vw 2vw 2vw 2vw;
+    padding: 0px 0px 5vw 0px;
+}
+nav b{
+    display: none;
+}
+#open_close{
+    display: none;
+}

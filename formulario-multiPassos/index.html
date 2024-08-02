@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--         -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="PC-style.css" media="screen and (min-width: 1300px)">
+
+    <title>Form mais foda do brasil</title>
+
+</head>
+<body>
+    <main class="container">
+        <!-- toda parte relacionada as bolinhas -->
+        <div class="container interactive-circle">
+            <div class="container d-flex justify-content-center circles">
+                <div class="fixing-flex">
+                    <div class="rounded-circle">1</div>
+                    <p>YOUR INFO</p>
+                </div>
+                
+                <div class="fixing-flex">
+                    <div class="rounded-circle">2</div>
+                    <p>SELECT PLAN</p>
+                </div>
+                <div class="fixing-flex">
+                    <div class="rounded-circle">3</div>
+                    <p>ADD-ONS</p>
+                </div>
+                <div class="fixing-flex">
+                    <div class="rounded-circle">4</div>
+                    <p>SUMMARY</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container form-container">
+            <h1 id="h1_info">Personal Info</h1>
+            <p id="p_info">Please provide your name, email adress, and phone number</p>
+
+            <form>
+                <!-- STEP 1 -->
+                <section id="info_step">
+                    <div class="form-group">
+                        <fieldset>
+                            <div class="container_validation">
+                                <legend><label for="name">Name</label></legend>
+                                <div class="step1_validation">this file is required</div>
+                            </div>
+
+                            <input type="text" name="name" id="name" placeholder="e.g. Stephen King" class="form-control">
+                            
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <div class="container_validation">
+                                <legend><label for="email">Email adress</label></legend>
+                                <div class="step1_validation">this file is required</div>
+                            </div>
+                            <input type="email" name="email" id="email" placeholder="e.g stephen@lorem.com" class="form-control">
+                        </fieldset>
+                    </div>
+                    <div class="form-group">
+                        <fieldset>
+                            <div class="container_validation">
+                                <legend><label for="phone">Phone number</label></legend>
+                                <div class="step1_validation">this file is required</div>
+                            </div>
+                            <input type="text" name="phone" id="phone" placeholder="e.g 00 0000-0000" class="form-control" maxlength="13">
+                        </fieldset>
+                    </div>
+                </section>
+
+                <!-- STEP 2 -->
+                <section id="plan_step">
+
+                    <div class="container_planos">
+                        <div class="planos">
+                            <img src="assets/images/icon-arcade.svg" alt="icon-arcade">
+                            <div class="tipo_preco_planos">
+                                <p class="tipo">Arcade</p>
+                                <p class="preco">$9/mo</p>
+                                <p class="promocao">2 month free</p>
+                            </div>
+                        </div>
+                        <div class="planos">
+                            <img src="assets/images/icon-advanced.svg" alt="icon-arcade">
+                            <div class="tipo_preco_planos">
+                                <p class="tipo">Advanced</p>
+                                <p class="preco">$12/mo</p>
+                                <p class="promocao">2 month free</p>
+                            </div>
+                        </div>
+                        <div class="planos">
+                            <img src="assets/images/icon-pro.svg" alt="icon-arcade">
+                            <div class="tipo_preco_planos">
+                                <p class="tipo">Pro</p>
+                                <p class="preco">$15/mo</p>
+                                <p class="promocao">2 month free</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mensal_anual">
+                        <p id="p_monthly">Monthly</p>
+
+                        <div class="form-check form-switch">
+                            <input type="checkbox" class="form-check-input" name="switch_button" id="switch_button">
+                            <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                        </div>
+                        
+
+
+                        <p id="p_yearly">Yearly</p>
+                    </div>
+
+                </section>
+
+                <!-- STEP 3 -->
+                <section id="add-ons_step">
+                    <div class="container_complementos">
+                        <div>
+                            <input type="checkbox" name="online_service" id="online_service">
+                        </div>
+
+                        <div class="p_complementos_div">
+                            <p class="p_complementos">
+                                <u class="nome_add">Online Service</u>
+                                <br>
+                            <span>Acess to multiplayer games</span></p>
+                        </div>
+                        <p class="preco_complemento">+$1/mo</p>
+                    </div>
+
+                    <div class="container_complementos">
+                        <div>
+                            <input type="checkbox" name="larger_storage" id="larger_storage">
+                        </div>
+
+                        <div class="p_complementos_div">
+                            <p class="p_complementos">
+                                <u class="nome_add">Larger Storage</u>
+                                <br>
+                            <span>Extra 1TB of cloud save</span>
+                            </p>
+                        </div>
+
+                        <p class="preco_complemento">+2/mo</p>
+                    </div>
+
+                    <div class="container_complementos">
+                        <div>
+                            <input type="checkbox" name="customizable_profile" id="customizable_profile">
+                        </div>
+
+                        <div class="p_complementos_div">
+                            <p class="p_complementos">
+                                <u class="nome_add">Customizable Profile</u>
+                                <br>
+                            <span>Custom theme on your profile</span>
+                            </p>
+                        </div>
+
+                        <p class="preco_complemento">+2/mo</p>
+                    </div>
+
+                </section>
+
+                <!-- STEP 4 -->
+
+                <section id="finishing">
+
+                    <div id="container_finish">   
+                        <div id="finish_plan">
+                            <p class="alterate_p" id="plan_tipo_finish">Arcade (Monthly)</p>
+                            <p class="alterate_p" id="plan_preco_finish">$90/mo</p>
+                        </div>
+
+                        <div id="finish_addOns">
+                            <div>
+                                <p class="alterate_p">online service</p>
+                                <p class="alterate_p">+$1/mo</p>
+                            </div>
+                            <div>
+                                <p class="alterate_p">larger storage</p>
+                                <p class="alterate_p">+$2/mo</p>
+                            </div>
+                        </div>
+
+                        <div id="finish_total">
+                            <p class="alterate_p">total (per month)</p>
+                            <p class="alterate_p">$+12</p>
+                        </div>
+
+                    </div>
+
+
+                </section>
+                
+                <!-- aqui temos o footer para PC -->
+                <section id="footer_PC">
+
+                    <div id="div_next">
+                        <input class="btn btn-primary returnPC" type="button" value="Go Back">
+                        <input class="btn btn-primary botaoPC" type="button" value="Next Step">
+                    </div>  
+
+                </section>
+                
+            </form>  
+        </div>
+
+        <!-- a criação desse footer se da para facilitar a estilização -->
+        <footer>
+
+            <div id="div_next">
+                <div>
+                    <input class="btn btn-primary return" type="button" value="Go Back">
+                </div>
+                <div>
+                    <input class="btn btn-primary botao" type="button" value="Next Step">
+                </div>
+            </div>  
+
+        </footer>
+        
+    </main>
+    
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--           -->
+
+
+    <script>
+        let contagem_step = 1
+
+        const btn = {
+            proximo: document.getElementsByClassName("botao")[0],
+            retornar: document.getElementsByClassName("return")[0],
+            
+            step1: document.querySelector("#info_step"),
+            step2: document.querySelector("#plan_step"),
+            step3: document.querySelector("#add-ons_step"),
+            step4: document.querySelector("#finishing"),
+
+            checagem_step: ()=>{
+               if(contagem_step == 1){
+                btn.retornar.style = "display: none;"
+               }else{
+                btn.retornar.style = "display: block;"
+               }
+               if(contagem_step == 4){
+                btn.proximo.value = "Confirmar"
+               } 
+            },
+
+            eventos: (bolinhas_func) =>{
+                const steps = [btn.step1, btn.step2, btn.step3, btn.step4]
+            
+                // proxima step
+                btn.proximo.addEventListener("click", () =>{
+                    if(step1.validacao_step1() == true){
+                        if(contagem_step == 4){
+                            window.alert("chegamos ao final")
+                        }else{
+                            contagem_step ++
+                        }
+                
+                        steps[contagem_step -2].style.display = "none"
+                        steps[contagem_step -1].style.display = "block"
+                        console.log(contagem_step)
+    
+                        btn.checagem_step()
+                        bolinhas_func()
+                    }
+                })
+
+                // retornar step
+                btn.retornar.addEventListener("click", () =>{
+                    if(contagem_step > 1){
+                        contagem_step --
+                    }
+                    
+                    steps[contagem_step].style.display = "none"
+                    steps[contagem_step - 1].style.display = "block"
+
+                    btn.checagem_step()
+                    bolinhas_func()
+                })
+
+                bolinhas_func()
+            }
+        }
+        const estilizacoes = {
+            bolinhas_func: function(){
+                const bolinhas = document.querySelectorAll(".rounded-circle")
+                
+                for(let c = 0; c < bolinhas.length; c ++){
+                    if(c == contagem_step - 1){
+                        bolinhas[c].style = "background-color: hsl(228, 100%, 84%); color: black;"
+                    }else{
+                        bolinhas[c].style = "background-color: transparent; color: white;"
+                    }
+                }
+
+                function titulo_subtitulo(){
+                    const h1 = document.querySelector("#h1_info")
+                    const p = document.querySelector("#p_info")
+
+                    switch(contagem_step){
+                        case 1:
+                            h1.innerHTML = "Persona info"
+                            p.innerHTML = "Please provide your name, email address, and phone number."
+                            break
+                        case 2:
+                            h1.innerHTML = "Select your plan"
+                            p.innerHTML = "You have the option of monthly or yearly biling."
+                            break
+                        case 3:
+                            h1.innerHTML = "Pick add-ons"
+                            p.innerHTML = "Add-ons help enhance your gaming experience."
+                            break
+                        case 4: 
+                            h1.innerHTML = "Finishing up"
+                            p.innerHTML = "Double-check everything looks OK before confirm."
+                            break
+                        default:
+                    }            
+                }
+                titulo_subtitulo()
+
+            }
+            
+        }
+        const step1 = {
+            nome: document.querySelector("#name"),
+            email: document.querySelector("#email"),
+            phone: document.querySelector("#phone"),
+            validation: document.querySelectorAll(".step1_validation"),
+
+            inputs_func: function(){
+                // Parte estética
+                this.phone.addEventListener("input", ()=>{
+                    let regEx = this.phone.value
+                    regEx = regEx.replace(/(\D)/g, '')
+                    regEx = regEx.replace(/(\d{2})(\d{5})(\d{4})/, '$1 $2-$3')
+                    this.phone.value = regEx 
+                })
+                // APAGAR
+                this.nome.value = "marlon"
+                this.email.value = "marlon@gmail.com"
+                this.phone.value = "54  984278177"
+            },
+            validacao_step1: function(){
+                
+                    let retornar = Boolean
+                    // caso esteja vazio
+                    if(this.nome.value.length == 0){
+                        this.validation[0].style.display = "block"
+                        this.nome.style = "border-color: hsl(354, 84%, 57%);"
+                        retornar = false
+                    }else{
+                        this.validation[0].style.display = "none"
+                        this.nome.style = "border-color: #ced4da;"
+                        retornar = true
+                    }
+                    if(this.email.value.length == 0){
+                        this.validation[1].style.display = "block"
+                        this.email.style = "border-color: hsl(354, 84%, 57%);"
+                        retornar = false
+                    }else{
+                        this.validation[1].style.display = "none"
+                        this.email.style = "border-color: #ced4da;"
+                        retornar = true
+                    }
+                    if(this.phone.value.length == 0){
+                        this.validation[2].style.display = "block"
+                        this.phone.style = "border-color: hsl(354, 84%, 57%);"
+                        retornar = false
+                    }else{
+                        this.validation[2].style.display = "none"
+                        this.phone.style = "border-color: #ced4da;"
+                        retornar = true
+                    }
+
+                    // caso esteja escrito incorretamente
+                    if(this.nome.value.length != 0 && this.nome.value.length < 5){
+                        this.validation[0].style.display = "block"
+                        this.validation[0].innerHTML = "Please write your full name"
+                        this.nome.style = "border-color: hsl(354, 84%, 57%);"
+                        retornar = false
+                    }
+
+                    if(this.email.value.length != 0 && !this.email.value.includes("@gmail.com") && !this.email.value.includes("@hotmail.com")){
+                        this.validation[1].style.display = "block"
+                        this.validation[1].innerHTML = "enter a valid email"
+                        this.email.style = "border-color: hsl(354, 84%, 57%);"
+                        retornar = false
+                    }
+
+                    if(this.phone.value.length != 0 && this.phone.value.length < 13){
+                        this.validation[2].style.display = "block"
+                        this.validation[2].innerHTML = "enter a valid phone number"
+                        this.phone.style = "border-color: hsl(354, 84%, 57%);"
+                        retornar = false
+                    }
+                    return retornar
+            }
+        }
+
+        const step2 = {
+            planos: document.querySelectorAll(".planos"),
+            switch_button: document.querySelector("#switch_button"),
+            preco: document.querySelectorAll(".preco"),
+            promocao: document.querySelectorAll(".promocao"),
+
+            checkbox_func: function(step3_precos){
+                
+                    this.planos[0].style = "background-color: hsl(228, 100%, 97%); border-color:rgba(110, 2, 110, 0.733);"
+    
+                    let plano_anterior = 0
+                    for(let c = 0; c < this.planos.length; c++){
+                        this.planos[c].addEventListener("click", () =>{
+                            if(plano_anterior != c){
+                                this.planos[plano_anterior].style = "background-color: white;"
+                                this.planos[c].style = "background-color: hsl(228, 100%, 97%); border-color:rgba(110, 2, 110, 0.733);"
+                                plano_anterior = c
+
+                                //Parte da Step4
+                                step4.tipo_plano.innerHTML = step4.tipos_planos_escolhidos[c]
+                                step4.preco_plano.innerHTML = `$${step4.precos_planos_escolhidos[c]}/mo`
+                                //
+                            }
+                        })
+                    }
+                    // botao que escolhe se é anual ou mensal
+                    this.switch_button.addEventListener("click", ()=>{
+                        if(this.switch_button.checked == true){
+                            for(let c = 0; c < this.promocao.length; c++){
+                                this.promocao[c].style.display = "block"
+                                this.preco[c].style = "margin: 0px;"
+
+                                // essa parte pertence ao step 3
+                                if(c > 0){
+                                    step3_precos[c].innerHTML = "+$20/yr"
+                                }
+                                // 
+                            }
+                            // essa parte tbm é do step 3
+                            step3_precos[0].innerHTML = "+$10/yr"
+                            // 
+
+                            this.preco[0].innerHTML = "$90/yr"
+                            this.preco[1].innerHTML = "$120/yr"
+                            this.preco[2].innerHTML = "$150/yr"
+                        }else{
+                            for(let c = 0; c < this.promocao.length; c++){
+                                this.promocao[c].style.display = "none"
+                                this.preco[c].style = "margin-bottom: 10px;"
+
+                                // essa parte pertence ao step 3
+                                if(c > 0){
+                                    step3_precos[c].innerHTML = "+$2/yr"
+                                }
+                                // 
+                            }
+                            // essa parte tbm é do steo 3
+                            step3_precos[0].innerHTML = "+$1/yr"
+                            // 
+
+                            this.preco[0].innerHTML = "$9/mo"
+                            this.preco[1].innerHTML = "$12/mo"
+                            this.preco[2].innerHTML = "$15/mo"
+                        }
+                    })
+                }
+        }
+
+        const step3 = {
+            add1: document.querySelector("#online_service"),
+            add2: document.querySelector("#larger_storage"),
+            add3: document.querySelector("#customizable_profile"),
+            adds_array: [],
+            nomes_add: document.querySelectorAll(".nome_add"),
+            precos: document.querySelectorAll(".preco_complemento"),
+
+            valores_step3: function(){
+                //adicionando os adds no array
+                this.adds_array.push(this.add1, this.add2, this.add3)
+                //
+
+                for(let c = 0; c < this.adds_array.length; c++){
+                    this.adds_array[c].addEventListener("click", ()=>{
+                        if(this.adds_array[c].checked){
+                            //aqui estou substituindo o valor dos arrays pelas devidas divs(que vem do return da função)
+                            step4.divs_criadas[c] = step4.addOns_func(this.nomes_add[c].textContent, this.precos[c].textContent)
+                        }else{
+                            step4.divs_criadas[c].style.display = "none"
+                            step4.divs_criadas[c] = null
+                        }
+                    })
+                }
+            }
+        }
+
+        const step4 = {
+            tipo_plano: document.querySelector("#plan_tipo_finish"),
+            preco_plano: document.querySelector("#plan_preco_finish"), 
+            finish_addOns: document.querySelector("#finish_addOns"),
+
+            tipos_planos_escolhidos: ["Arcade", "Advanced", "Pro"],
+            precos_planos_escolhidos: [9, 12, 15],
+
+
+            divs_criadas: [],
+
+            addOns_func: function(nome_add, preco_add){
+                const div = document.createElement("div")
+                const p1 = document.createElement("p")
+                const p2 = document.createElement("p")
+                
+                p1.innerHTML = nome_add
+                p2.innerHTML = preco_add
+
+                div.appendChild(p1)
+                div.appendChild(p2)
+
+                this.finish_addOns.appendChild(div)
+                return div
+            }
+        }
+
+        btn.eventos(estilizacoes.bolinhas_func)
+        step1.inputs_func()
+        step2.checkbox_func(step3.precos)
+        step3.valores_step3()
+        
+        
+    </script>
+</body>
+</html>

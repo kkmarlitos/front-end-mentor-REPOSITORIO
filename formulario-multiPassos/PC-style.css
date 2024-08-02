@@ -1,0 +1,172 @@
+main.container{
+    width: 70vw;
+    height: 40vw;
+    margin-top: 2vw;
+    padding: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 20vw 45vw;
+    border-radius: 10px;
+}
+.interactive-circle{
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    background-position: center;
+    background-size: contain;
+    width: 20vw;
+    height: 38vw;
+    flex-direction: row;
+}
+.circles{
+    flex-direction: column;
+    padding-top: 2vw;
+    padding-left: 2vw;
+}
+.fixing-flex{
+    display: flex;
+    align-items: end;
+}
+.fixing-flex > p{
+    display: block;
+    margin: 0px 0px 0.8vw 0.5vw;
+    color: rgba(255, 255, 255, 0.897);
+    font-weight: 500;
+    font-size: 1vw;
+}
+.rounded-circle{
+    width: 3vw;
+    height: 3vw;
+    padding-top: 0vw;
+    margin-top: 1.5vw;
+    margin-left: 0vw;
+    color: white;
+    font-size: 1.8vw;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.685);
+}
+.form-container{
+    width: 40vw;
+    height: 40vw;
+    background-color: transparent;
+    margin-top: 12vw;
+    box-shadow: none;
+}
+#h1_info{
+    font-size: 2.5vw;
+    font-weight: 600;
+    color: var(--Marine-blue);
+}
+#p_info{
+    font-size: 1.8vw;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.438);
+}
+label{
+    font-size: 1.3vw;
+    font-weight: 400;
+}
+.botao{   
+    background-color: var(--Marine-blue);
+}
+
+ /* aqui começa as estilizações da segunda parte */
+
+ .container_planos{
+    display: flex;
+    justify-content: space-around;
+}
+ .planos{
+    display: block;
+    margin-right: 1vw;
+    margin-bottom: 1vw;
+    padding: 0.8vw 2.5vw 0.8vw 0.8vw;
+ }
+ .tipo_preco_planos{
+    width: 5vw;
+    padding-left: 0px;
+    margin-top: 2vw;
+}
+.tipo{
+    font-size: 1vw;
+    margin: 0px;
+}
+.preco{
+    margin-bottom: 0px;
+}
+.promocao{
+    color: var(--Marine-blue);
+    font-size: 1.8vh;
+    margin: 0px;
+}
+#mensal_anual>p{
+    padding-top: 0vw;
+    margin: 1vw;
+}
+
+/* Aqui começa a terceira parte */
+
+.container_complementos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 2px solid var(--Purplish-blue);
+    border-radius: 10px;
+    margin-top: 1vw;
+}
+#online_service, #larger_storage, #customizable_profile{
+    width: 1.2vw;
+    height: 1.2vw;
+}
+.p_complementos{
+    color: var(--Marine-blue);
+    margin: 0px;
+    padding-left: 1vw;
+    font-weight: bold;
+}
+.p_complementos > span{
+    color: rgba(128, 128, 128, 0.829);
+    font-weight: normal;
+    font-size: 1vw;
+}
+.p_complementos_div{
+    width: 20vw;
+}
+.preco_complemento{
+    color: var(--Purplish-blue);
+    margin: 0px;
+    font-size: 1vw;
+    padding-left: 0vw;
+}
+
+/* aqui começa a quarta parte */
+
+#finish_plan{
+    border-width:0px;
+    border-bottom: 2px;
+    border-image: linear-gradient(to right, white,rgb(214, 214, 214),rgba(128, 128, 128, 0.692), rgb(214, 214, 214),white) 1; 
+    border-style: solid;
+}
+#finish_plan > p {
+    padding: 1.5vw;
+}
+
+#finish_addOns > div > p{
+    color: rgba(128, 128, 128, 0.616);
+    padding: 1.5vw;
+}
+
+#finish_total > p{
+    color: rgba(128, 128, 128, 0.726);
+    padding: 1vw;
+}
+
+/*  */
+
+footer{
+    display: none;
+}
+#footer_PC{
+    display: block;
+    margin-top: 1vw;
+}

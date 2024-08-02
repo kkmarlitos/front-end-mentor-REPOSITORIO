@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+main{
+width: 50vw;
+margin: auto;
+background-color: white;
+padding-top: 50px;
+border-radius: 20px 20px 80px 20px;
+}
+form{
+display: flex;
+justify-content: space-around;
+color: var(--preto_fundo);
+padding-bottom: 60px;
+}
+input{
+margin-left: 5px;
+width: 8vw;
+height: 20px;
+padding: 12px;
+border-radius: 5px;
+border: 1px solid rgba(0, 0, 0, 0.404);
+font-weight: 800;
+font-size: 20px;
+}
+fieldset{
+border: 0px;
+padding-left: 10px;
+width: 113px;
+}
+legend{
+font-weight: 800;
+font-size: 13px;
+color: rgba(0, 0, 0, 0.507);
+letter-spacing: 3px;
+}
+div#estilo{
+border-width: 3px;
+border-style: solid;
+border-image: linear-gradient(to right, rgba(0, 0, 0, 0.11), rgba(0, 0, 0, 0.507), rgba(0, 0, 0, 0.486), rgba(0, 0, 0, 0.11)) 1;
+border-bottom: 0px;
+border-left: 0px;
+border-right: 0px;
+}
+img{
+width: 30px;
+background-color: var(--roxo);
+display: block;
+margin-right: 2vw;
+margin-top: -30px;
+border-radius: 50%;
+padding: 15px;
+}
+p{
+padding-top: 15px;
+padding-left: 20px;
+font-size: 50px;
+font-weight: 800;
+font-style: italic;
+}
+strong{
+color: var(--roxo);
+}
+p.erro{
+font-size: 12px;
+padding-left: 5px;
+padding-top: 2px;
+color: rgba(250, 30, 30, 0.815);
+font-style: italic;
+}

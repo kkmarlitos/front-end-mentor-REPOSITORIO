@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400700&display=swap');
+
+:root{
+    --color0: hsl(0, 0%, 100%);
+    --cinza: hsl(212, 45%, 89%);
+    --azul_claro: hsl(220, 15%, 55%);
+    --azul_escuro: hsl(218, 44%, 22%);
+    --fonte: 'Outfit', sans-serif;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+body{
+    background-color: var(--cinza);
+    position: relative;
+}
+main{
+    background-color: var(--color0);
+    width: 90vw;
+    font-family: var(--fonte);
+    color: rgba(0, 0, 0, 0.781);
+    border-radius: 20px;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.589);
+}
+div{
+    text-align: center;
+    padding-top: 20px;
+}
+img{
+    width: 80vw;
+    border-radius: 15px
+}
+h1{
+    padding: 20px 20px 0px 20px;
+    font-size: 22px;
+    text-align: center;
+}
+p{
+    padding: 20px;
+    font-size: 17px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.568);
+}
+
+/* celulares maiores */
+@media screen and (min-width:460px) {
+    main{
+        width: 70vw;
+        left: 16vw;
+    }
+    img{
+        width: 63vw;
+    }
+    h1{
+        font-size: 28px;
+    }
+    p{
+        font-size: 20px;
+    }
+    main{
+        top: 5vw;
+    }
+}
+
+/* tablets */
+@media screen and (min-width:730px){
+    main{
+        top: 5vh;
+        left: 26vw;
+        width: 50vw;
+    }
+    div{
+        padding-top: 20px;
+    }
+    img{
+        width: 45vw;
+    }
+    h1{
+        font-size: 30px;
+    }
+    p{
+        font-size: 20px;
+    }
+}
+
+/* not */
+@media screen and (min-width:900px) {
+    main{
+        width: 45vw;
+        left: 30vw;
+        top: 5vh;
+    }
+    img{
+        width: 40vw;
+    }
+    h1{
+        font-size: 25px;
+    }
+    
+}
+
+/* pcs */
+@media screen and (min-width:1100px){
+    main{
+        width:30vw;
+        left: 38vw;
+    }
+    img{
+        width: 25vw;
+    }
+    
+}

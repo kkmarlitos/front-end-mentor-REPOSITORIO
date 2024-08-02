@@ -1,0 +1,223 @@
+*{
+    margin: 0px;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./starter-code/assets/home/background-home-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#embrulho{
+    width: 100vw;
+    height: 100vh;
+}
+header{
+    font-family: monospace;
+    padding: 20px 20px 0px 20px;
+    
+}
+#logo{
+    display: inline-block;
+    padding-right: 70vw;
+}
+#logo img{
+    width: 10vw;
+    padding-top: 2vw;
+}
+nav{
+    font-size: 5vw;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    transform: translateX(600px);
+    transition: transform 0.5s;
+    padding-top: 20vw;
+    color: rgba(255, 255, 255, 0.774);
+    background-image: linear-gradient( #131522e1,#45556eef ,#45556eea,#131522e1);
+}
+nav p{
+    margin: 30px 10px 0px 20px;
+    padding: 10px;
+    border-bottom: 2px solid transparent;
+    transition: border 0.4s;
+}
+#open_close{
+    display: inline-block;
+    position: absolute;
+    top: 8vw;
+}
+#abre_menu{
+    width: 8vw;
+}
+#fecha_menu{
+    display: none;
+    width: 8vw;
+}
+main{
+    font-family: monospace;
+    color: rgba(255, 255, 255, 0.897);
+    padding: 15px 20px 20px 20px;
+}
+#home h1{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding-top: 5vw;
+}
+#home h2{
+    text-align: center;
+    font-size: 15vw;
+    padding-top: 3vw;
+    padding-bottom: 7vw;
+}
+.titulos{
+    color: rgba(255, 255, 255, 0.884);
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 5vw;
+}
+b{
+    color: rgba(255, 255, 255, 0.562);
+}
+#home p{
+    width: 80vw;
+    margin: auto;
+    font-size: 16px;
+    padding-bottom: 10vw;
+    text-align: center;
+}
+.arredondar{
+    margin: auto;
+    width: 50vw;
+}
+#home .arredondar p{
+    font-size: 17px;
+    width: 25vw;
+    padding: 15vw 5vw 15vw 5vw;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+#embrulho_destinos{
+    display: none;
+    color: rgba(255, 255, 255, 0.788);
+    text-align: center;
+}
+#embrulho_destinos h3{
+    padding-bottom: 10px;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.877);
+}
+h4{
+    font-size: 20px;
+}
+#destinos p{
+    width: 90vw;
+    font-size: 15px;
+    padding-bottom: 20px;
+    margin: auto;
+    text-align: center;
+}
+#destinos img{
+    width: 28vw;
+}
+#escolha_destino{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px 10px 0px;
+}
+#escolha_destino p{
+    padding: 0px;
+}
+#distancia_tempo{
+    padding-top: 20px;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, rgba(255, 255, 255, 0.336),white ,white, white, rgba(255, 255, 255, 0.336)) 1;
+}
+fieldset{
+    border: 0px;
+}
+legend{
+    text-align: center;
+}
+#distancia_tempo p{
+    text-align: center;
+    font-size: 20px;
+}
+#embrulho_crew{
+    display: none;
+}
+   #div_img_crew{
+    text-align: center;
+    height: 25vh;
+   }
+   #embrulho_crew img{
+    width: 30vw;
+    padding-top: 15px;
+   }
+   .bolinha_div{
+    display: flex;
+    width: 40vw;
+    margin: auto;
+    padding: 4vw 0px 5vw 0px;
+   }
+   .bolinha{
+    border: 1px solid transparent;
+    background-color: rgba(255, 255, 255, 0.089);
+    margin-right: 5vw;
+    border-radius: 10px;
+    width: 15px;
+    height: 15px;
+   }
+   #funcao_crew{
+    color: rgba(255, 255, 255, 0.692);
+    text-align: center;
+    font-size: 16px;
+   }
+   #nome_crew{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 10px;
+   }
+   #crew_bio{
+    color: rgba(255, 255, 255, 0.692);
+    text-align: justify;
+    font-size: 15px;
+   }
+#embrulho_technology{
+    display: none;
+}
+#div_img_tech{
+    margin: auto;
+}
+#embrulho_technology img{
+width: 90vw;
+}
+.bolinha_tech{
+    font-size: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px 18px 10px 18px;
+    margin-right: 3vw;
+}
+article legend{
+font-size: 14px;
+color: rgba(255, 255, 255, 0.678);
+}
+#terminology{
+text-align: center;
+padding-bottom: 10px;
+font-size: 20px;
+font-weight: 600;
+color: rgba(255, 255, 255, 0.849);
+}
+.texts{
+width: 80vw;
+margin: auto;
+text-align: center;
+font-size: 12px;
+color: rgba(255, 255, 255, 0.750);
+}

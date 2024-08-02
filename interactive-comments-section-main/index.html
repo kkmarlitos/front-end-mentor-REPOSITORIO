@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive comments</title>
+  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="PC_style.css" media="screen and (min-width: 1100px)">
+
+</head>
+<body>
+    <section>
+        <div id="embrulho_section">
+          <div class="comentario">
+              <div class="header_coment">
+                <img src="images/avatars/image-amyrobson.webp" alt="avatar">
+                <a href="#">amyrobson</a>
+                <span>1 month ago</span>
+              </div>
+              <div class="main_coment">
+                <p>Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well</p>
+              </div>
+                  <div class="like_css">
+                    <div class="likes">
+                      <div class="like">+</div>
+                      <p class="numbers_like"></p>
+                      <div class="dislike">-</div>
+                    </div>
+                  </div>
+                  <p class="responder">
+                    <img src="images/icon-reply.svg" alt="reply">
+                    reply
+                  </p>
+          </div>
+          <div class="todas_respostas">
+            
+          </div>
+          <div class="comentario">
+            <div class="header_coment">
+              <img src="images/avatars/image-maxblagun.webp" alt="avatar">
+              <a href="#">maxblagun</a>
+              <span>2 week ago</span>
+            </div>
+            <div class="main_coment">
+              <p>Woah, your project look awesome! How long have you been coding for? I'm still new, but think i want to dive into React as well soon. Perhaps you can give me an insight on where i can learn React?
+              Thanks!</p>
+            </div>
+            <div class="like_css">
+              <div class="likes">
+                <div class="like">+</div>
+                <p class="numbers_like"></p>
+                <div class="dislike">-</div>
+              </div>
+            </div>
+            <p class="responder">
+              <img src="images/icon-reply.svg" alt="reply">
+              reply
+            </p>
+          </div>
+
+          <div class="todas_respostas">
+            <div class="resposta">
+              <div class="header_coment">
+                <img src="images/avatars/image-ramsesmiron.webp" alt="avatar">
+                <a href="#">ramsesmiron</a>
+                <span>1 week ago</span>
+              </div>
+              <div class="main_coment">
+                <p><b>@maxblagun</b> If you're still new, i'd recommend focusing on the fundamentals of HTML, CSS and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+              </div>
+              <div class="like_css">
+                <div class="likes">
+                  <div class="like">+</div>
+                  <p class="numbers_like"></p>
+                  <div class="dislike">-</div>
+                </div>
+              </div>
+              <p class="responder">
+                <img src="images/icon-reply.svg" alt="reply">
+                reply
+              </p>
+            </div>
+            <div class="todas_respostas">
+
+            </div>
+            <div class="resposta">
+              <div class="header_coment">
+                <img src="images/avatars/image-juliusomo.webp" alt="avatar">
+                <a href="#" class="you_name">juliusomo</a>
+                <span class="you">You</span>
+                <span>2 days ago</span>
+              </div>
+              <div class="main_coment">
+                <p class="minha_resposta"><b>@ramsesmiron</b> I couldn't agree more with this. Everything moves so fast and it always seems like ereveryone knows the newest library/framework. But the fundamentals are what stay constant.</p>
+              </div>
+              <div class="like_css">   
+                  <div class="likes">
+                      <div class="like">+</div>
+                      <p class="numbers_like"></p>
+                      <div class="dislike">-</div>
+                    </div>
+              </div>
+                  <div class="delete_edit_css">
+                    <div class="delete_edit">
+                        <span class="delete">
+                          <img src="images/icon-delete.svg" alt="delete">
+                          Delete
+                        </span>
+                        <span class="edit">
+                          <img src="images/icon-edit.svg" alt="edit"> 
+                          Edit
+                        </span>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+        <div id="mensagem_deletar">
+          <h1>Delete comment</h1>
+          <p>Are you sure you want to delete this comment? This will remove the comment and can't be undone</p>
+          <div id="confirmar_cancelar">
+            <p id="cancelar_delete">NO, CANCEL</p>
+            <p id="confirmar_delete">YES, DELETE</p>
+          </div>
+        </div>
+        <div id="sua_mensagem">
+          <input type="text" name="mensage" id="mensage" placeholder="add a coment...">
+          <img src="images/avatars/image-juliusomo.webp" alt="image-juliusomo">
+          <input type="button" value="SEND" id="enviar_mensagem" onclick="submetendo()">
+        </div>
+    </section>
+    
+
+    <script src="main_js.js">
+      
+    </script>
+
+</body>
+</html>

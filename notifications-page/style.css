@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+    :root{
+      --bolinha_notific: hsl(1, 90%, 64%);
+      --total_notific: hsl(219, 85%, 26%);
+      --fundo: hsl(210, 60%, 98%);
+      --fundo_nao_vista: hsl(211, 68%, 94%);
+      --marcar_todas: hsl(219, 12%, 42%);
+
+    }
+    *{
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    section{
+      width: 75vw;
+      height: 100vh;
+      background-color: var(--fundo);
+      padding: 10px;
+      margin: auto;
+      position: fixed;
+      top: 0;
+      transform: translateX(100vw);
+      transition: transform 0.5s;
+      overflow-y: auto;
+    }
+    header{
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+    header h1{
+      display: inline;
+      font-size: 16px;
+    }
+    .quantidade_notific{
+      display: inline;
+      background-color: var(--total_notific);
+      color: white;
+      padding: 4px 10px 4px 10px;
+      border-radius: 7px;
+
+    }
+    .marcar_todas{
+      display: inline;
+      font-size: 13px;
+      padding-left: 5vw;
+      color: var(--marcar_todas);
+    }
+    section main div{
+      background-color: var(--fundo_nao_vista);
+      width: 70vw;
+      padding: 10px;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      border-radius: 8px;
+    }
+    section main div img{
+      width: 9vw;
+      padding-right: 15px;
+    }
+    section  main div p{
+      font-size: 12px;
+      padding-right: 15px;
+      padding-bottom: 5px;
+    }
+    b{
+      color: var(--total_notific);
+    }
+    .primeiro_torneio{
+      color: rgba(0, 0, 0, 0.486);
+    }
+    .bolinha_notific{ 
+      background-color: var(--bolinha_notific);
+      width: 0.1vw;
+      margin-left: auto;
+      border-radius: 50%;
+    }
+  
+    .mensagens_privada{
+      display: grid;
+      grid-template-columns: 12vw 20vw;  
+    }
+    .mensagens_privada p{
+      width: 40vw;
+    }
+      .mensagem_privada{
+        background-color: var(--fundo);
+        margin-left: 11vw;
+        border: 1px solid rgba(0, 0, 0, 0.329);
+        width: 50vw;
+        color: rgba(0, 0, 0, 0.61);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .marcar_todas:hover{
+        color: var(--total_notific);
+      }
+
+      /* BODY  */
+
+      .header{
+        display: flex;
+        padding: 10px;
+        background-color: var(--total_notific);
+    }
+    .header img{
+        width: 10vw;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    #fechar{
+      font-size: 30px;
+      font-weight: 800;
+      padding: 10px;
+      display: none;
+    }
+    

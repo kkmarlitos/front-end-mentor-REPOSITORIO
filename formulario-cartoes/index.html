@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões</title>
+    <link rel="shortcut icon" href="images/icon-complete.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pc.css" media="screen and (min-width: 1300px)">
+</head>
+<body>
+    <header>
+        <img src="images/bg-card-back.png" alt="cartão" id="back">
+        <span class="span_000">000</span>
+        <img src="images/bg-card-front-foda.png" alt="cartão"id="front">
+        <p id="num_cartao">0000 0000 0000 0000</p>
+            <div class="span_cartao">
+                    <span>JANE APPLESEED</span>
+                    <span>00/00</span>
+            </div>
+    </header>
+    <main>
+        <form method="post" autocomplete="off">
+            
+                <label for="card_name">CARDHOLDER NAME</label>
+                <input type="text" name="name-card" id="card_name" required placeholder="e.g.Jane Appleseed">
+                <p class="erro"></p>
+                <label for="card_number">CARD NUMBER</label>
+                <input type="text" name="number-card" id="card_number" required placeholder="e.g.1234 5678 8123 0000" oninput="espaco_numeros()" maxlength="19">
+                <p class="erro"></p>
+                    <div class="label">
+                        <label for="mes">EXP. DATE (MM/YY)</label>
+                        <label for="cvc">CVC</label>
+                    </div>
+                    <br>
+                  <div class="inp">
+                          <input type="number" name="mes" id="mes" required placeholder="MM" max="2">
+                          <input type="number" name="ano" id="ano" required placeholder="YY">
+                          <input type="number" name="cvc" id="cvc" required placeholder="e.g.123">
+                  </div>
+                  <div class="erro">
+                      <p></p>
+                      <p></p>
+                  </div>
+                  <input type="button" value="Confirm" id="confirmar" onclick="clicar()">
+        </form>
+    </main>
+
+    <script>
+        const main = document.getElementsByTagName('main')[0]
+        const span_cvcCard = document.getElementsByTagName('span')[0]
+        const numCard = document.getElementById('num_cartao')
+        const span_name = document.getElementsByTagName('span')[1]
+        const span_date = document.getElementsByTagName('span')[2]
+        const p_erro = document.getElementsByTagName('p')
+        //os p de erro vão de 1 a 4
+        
+
+        let name_cartao = document.getElementById('card_name')
+        let num_cartao = document.getElementById('card_number')
+        let mes_cartao = document.getElementById('mes')
+        let ano_cartao = document.getElementById('ano')
+        let cvc_cartao = document.getElementById('cvc')
+
+        function clicar(){
+            const name = name_cartao.value
+            const num = num_cartao.value
+            const mes = mes_cartao.value
+            const ano = ano_cartao.value
+            const cvc = cvc_cartao.value
+            p_erro[1].innerText = ''
+            p_erro[2].innerText = ''
+            p_erro[3].innerText = ''
+            p_erro[4].innerText = ''
+            name_cartao.style.border = '1px solid black'
+            num_cartao.style.border = '1px solid black'
+            cvc_cartao.style.border = '1px solid black'
+            mes_cartao.style.border = '1px solid black'
+            ano_cartao.style.border = '1px solid black'
+
+            if (name == 0 || num == 0 || mes == 0 || ano == 0 || cvc == 0 || name.length > 25 || num.length < 16 || mes > 12 || cvc.length > 3 || cvc.length < 3){
+                
+                switch(true){ //erro do nome
+                    case name == 0:
+                        p_erro[1].innerText = 'this area is required'
+                        name_cartao.style.border = '2px solid red'
+                        break
+                    case name.length > 25:
+                        p_erro[1].innerText = 'please shorten the name'
+                        name_cartao.style.border = '2px solid red'
+                        default:
+                }
+
+                switch(true){ //erro numero do cartao
+                    case num == 0:
+                        p_erro[2].innerText = 'Wrong format, numbers only'
+                        num_cartao.style.border = '2px solid red'
+                        break
+                    case num.length < 16:
+                       p_erro[2].innerText = 'Wrong'
+                       num_cartao.style.border = '2px solid red'
+                       break
+                    default:
+                }
+                switch(true){ //mes
+                    case mes == 0:
+                        p_erro[3].innerText = "Cant't be blank"
+                        mes_cartao.style.border = '2px solid red'
+                        break
+                    case mes > 12: 
+                        p_erro[3].innerText = 'Please put a valid mounth'
+                        mes_cartao.style.border = '2px solid red'
+                        break
+                    default:
+                }
+                switch(true){ //ano
+                    case ano == 0:
+                         p_erro[3].innerText = "Cant't be blank"
+                         ano_cartao.style.border = '2px solid red'
+                        break
+                    default:
+                }
+                switch(true){ //cvc
+                    case cvc == 0: 
+                        p_erro[4].innerText = "Cant't be blank"
+                        cvc_cartao.style.border = '2px solid red'
+                     break
+                     case cvc.length > 3: 
+                        p_erro[4].innerText = "Invalid"
+                        cvc_cartao.style.border = '2px solid red'
+                        break
+                    case cvc.length < 3: 
+                         p_erro[4].innerText = "Invalid"
+                        cvc_cartao.style.border = '2px solid red'
+                }
+            } else{
+                span_cvcCard.innerText = cvc
+                numCard.innerText = num
+                span_name.innerText = name
+                span_date.innerText = `${mes}/${ano}`
+
+            main.innerHTML = '<img src="images/icon-complete.svg" class="img_complete"><h1 class="main_script">Thank You! <p class="main_script" style="padding-bottom:40px">We have added your card detail<p> <input type="button" value="Continue" id="confirmar" style="margin: auto;">'
+            }
+        }
+        function espaco_numeros(){
+            const numero_valor = num_cartao.value.replace(/(\s)/g, '')
+            let numero_formatado = numero_valor.replace(/(\d{4})(?=\d)/g, '$1 ')
+            num_cartao.value = numero_formatado
+        }
+    </script>
+</body>
+</html>

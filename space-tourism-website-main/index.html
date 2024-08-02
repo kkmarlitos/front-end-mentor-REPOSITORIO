@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="starter-code/assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:700px)">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div id="embrulho" translate="no">
+        <header>
+            <div id="logo">
+                <img src="starter-code/assets/shared/logo.svg" alt="logo">
+            </div>
+            <nav>
+                <p id="p_home"><b>00</b> HOME</p>
+                <p id="p_destination"><b>01</b> DESTINATION</p>
+                <p id="p_crew"><b>02</b> CREW</p>
+                <p id="p_technology"><b>03</b> TECHNOLOGY</p>
+            </nav>
+            <div id="open_close">
+                <img src="starter-code/assets/shared/icon-hamburger.svg" alt="open_menu" id="abre_menu">
+                <img src="starter-code/assets/shared/icon-close.svg" alt="close_menu" id="fecha_menu">
+            </div>
+        </header>
+
+        <main>
+             <section id="home">
+                <h1>SO, YOU WANT TO TRAVEL TO</h1>
+                <h2>SPACE</h2>
+                <p>let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
+                <div class="arredondar">
+                    <p>EXPLORE</p>
+                </div>
+            </section>
+
+            <section id="embrulho_destinos">
+                <p class="titulos"><b>01 </b>PICK YOUR DESTINATION</p>
+    
+                 <div id="destinos">
+                    <div id="div_img_desti">
+                        <img src="starter-code/assets/destination/image-mars.webp" alt="mars" id="planeta_img">
+                    </div>
+                    <div id="escolha_destino">
+                        <p class="planets">MOON</p>
+                        <p class="planets">MARS</p>
+                        <p class="planets">EUROPA</p>
+                        <p class="planets">TITAN</p>
+                    </div>
+                    <h4>MARS</h4>
+                    <p id="description_planet">Don't forget to pack your hiking boots. You'll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!</p>
+                 </div>  
+                <div id="distancia_tempo">
+                    <fieldset>
+                        <legend>AVG. DISTANCE</legend>
+                        <p id="distancia">225 MIL. KM</p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>EST. TRAVEL TIME</legend>
+                        <p id="tempo_estimado">9 MONTH</p>
+                    </fieldset>
+                </div>
+            </section>
+
+           <section id="embrulho_crew">
+                <p class="titulos"><b>02 </b>MEET YOUR CREW</p>
+                <div id="div_img_crew">
+                    <img src="starter-code/assets/crew/image-anousheh-ansari.webp" alt="crew_fotos" id="img_crew">
+                </div>
+                <div class="bolinha_div">
+                    <div class="bolinha" id="selecao1"></div>
+                    <div class="bolinha" id="selecao2"></div>
+                    <div class="bolinha" id="selecao3"></div>
+                    <div class="bolinha" id="selecao4"></div>
+                </div>
+                <p id="funcao_crew">FLIGHT ENGINEER</p>
+                <p id="nome_crew">ANOUSHEH ANSARI</p>
+                <div class="texts">
+                    <p id="crew_bio">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+                </div>
+            </section> 
+            
+             <section id="embrulho_technology">
+                <p class="titulos"><b>03 </b>SPACE LAUNCH 101</p>
+                <div id="div_img_tech">
+                    <img src="./starter-code/assets/technology/image-launch-vehicle-landscape.jpg" alt="technologies" id="img_tech">
+                </div>
+                <div class="bolinha_div">
+                    <div id="bolinha_tech1" class="bolinha_tech">1</div>
+                    <div id="bolinha_tech2" class="bolinha_tech">2</div>
+                    <div id="bolinha_tech3" class="bolinha_tech">3</div>
+                </div>
+                <article>
+                    <fieldset>
+                        <legend>The terminology...</legend>
+                        <p id="terminology">Launch vehicle</p>
+                        <p class="texts">A launch vehicle or carrier rocket is adrocket-propelled vehicle used to carry a 
+                        payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
+                        WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
+                        it's quite an awe-inspiring sight on the launch pad!</p>
+
+                    </fieldset>
+                </article>
+            </section> 
+        </main> 
+        
+
+
+    </div>
+
+<script src="script.js" type="module"></script>
+    
+</body>
+</html>

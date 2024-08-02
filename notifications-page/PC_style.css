@@ -1,0 +1,76 @@
+#container_index{
+    width: 50vw;
+    margin: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.548);
+}
+.header{
+    margin-top: 5vw;
+}
+.header h1{
+    font-size: 30px;
+    width: 20vw;
+}
+.header a{
+    margin-left: auto;
+}
+.header img{
+    width: 4vw;
+    padding: 10px;
+    position: relative;
+}
+.main{
+    background-color: hsla(219, 85%, 26%, 0.315);
+    padding: 10px;
+}
+.confirmar{
+    margin-top: 5px;
+    padding: 5px;
+    background-color: var(--total_notific);
+    border: 1px solid var(--total_notific);
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.774);
+}
+.confirmar:hover{
+    background-color: hsla(219, 85%, 26%, 0.849);;
+}
+section{
+    width: 20vw;
+    height: 59vh;
+    display: none;
+    position: absolute;
+    left: 49vw;
+    top: 10vw;
+    transform: translateX(0);
+    border-radius: 10px 0px 10px 10px;
+}
+header .quantidade_notific{
+    font-size: 12px;
+    padding: 5px 8px 5px 8px;
+}
+.marcar_todas{
+    padding-left: 1.5vw;
+}
+section main div{
+    width: 18vw;
+}
+section main div img{
+    width: 3vw;
+}
+.mensagens_privada p{
+    width: 10vw;
+  }
+  section main div strong{
+    font-size: 13px;
+  }
+  
+  .mensagens_privada{
+    grid-template-columns: 5vw 20vw;  
+  }
+  .mensagem_privada{
+    background-color: var(--fundo);
+    margin-left: 5vw;
+    border: 1px solid rgba(0, 0, 0, 0.329);
+    width: 10vw;
+    color: rgba(0, 0, 0, 0.61);
+    font-size: 12px;
+  }

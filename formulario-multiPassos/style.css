@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+        :root{
+            --Marine-blue: hsl(213, 96%, 18%);
+            --Purplish-blue: hsl(243, 100%, 62%);
+            --Pastel-blue: hsl(228, 100%, 84%);
+            --Light-blue: hsla(206, 94%, 87%, 0.63);
+            --Strawberr-red: hsl(354, 84%, 57%);
+        }
+        body{
+            background-color: var(--Light-blue);
+            margin: 0px;
+        }
+        main.container{
+            font-family: 'Ubuntu', sans-serif;
+            padding: 0px;
+        }
+        .interactive-circle{
+            background-image: url('assets/images/bg-sidebar-mobile.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 40vw;
+        }
+        .circles{
+            padding-top: 10vw;
+        }
+        .fixing-flex > p{
+            display: none;
+        }
+        .rounded-circle{
+            width: 10vw;
+            height: 10vw;
+            padding-top: 1.5vw;
+            margin-left: 4vw;
+            color: white;
+            font-size: 4vw;
+            font-weight: bold;
+            text-align: center;
+            border: 2px solid rgba(255, 255, 255, 0.685);
+        }
+        .form-container{
+            background-color: rgb(255, 255, 255);
+            width: 90vw;
+            padding: 5vw;
+            transform: translateY(-14vw);
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.514);
+            border-radius: 10px;
+        }
+        #h1_info{
+            font-weight: 600;
+            color: var(--Marine-blue);
+        }
+        #p_info{
+            font-size: 4.5vw;
+            font-weight: 500;
+            color: rgba(0, 0, 0, 0.438);
+        }
+        .container_validation{
+            display: flex;
+            align-items: center;
+        }
+        label{
+            font-size: 4vw;
+            font-weight: 400;
+        }
+        .step1_validation{
+            width: 50vw;
+            font-size: 3vw;
+            color: var(--Strawberr-red);
+            display: none;
+        }
+        
+
+         /* aqui começa as estilizações da segunda parte */
+
+        
+        .planos{
+            display: flex;
+            margin-bottom: 2vw;
+            padding: 3px 8px 3px 8px;
+            border: 2px solid rgba(128, 128, 128, 0.411);
+            border-radius: 10px;
+        }
+        .tipo_preco_planos{
+            padding-left: 5vw;
+        }
+        .tipo{
+            color: var(--Marine-blue);
+            font-weight: bold;
+            font-size: 5vw;
+            margin: 0px;
+        }
+        .preco{
+            font-style: italic;
+            color: rgba(0, 0, 0, 0.719);
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        .promocao{
+            display: none;
+            color: var(--Marine-blue);
+            font-size: 3.5vw;
+            margin: 2vw;
+        }
+        #mensal_anual{
+            background-color: hsla(206, 94%, 87%, 0.281);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0px 20px 0px 20px;
+        }
+        #mensal_anual>p{
+            padding-top: 4vw;
+        }
+        #p_monthly{
+            color: var(--Marine-blue);
+            font-weight: bold;
+        }
+        #p_yearly{
+            color: rgba(128, 128, 128, 0.733);
+            font-weight: bold;
+        }
+
+        /* Aqui começa as estilizações da terceira parte */
+
+        .container_complementos{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border: 2px solid var(--Purplish-blue);
+            border-radius: 10px;
+            margin-top: 2vw;
+        }
+        #online_service, #larger_storage, #customizable_profile{
+            width: 5vw;
+            height: 5vw;
+        }
+        .p_complementos{
+            color: var(--Marine-blue);
+            margin: 0px;
+            padding-left: 1vw;
+            font-weight: bold;
+        }
+        .p_complementos > span{
+            color: rgba(128, 128, 128, 0.829);
+            font-weight: normal;
+            font-size: 3vw;
+        }
+        .p_complementos > u{
+            text-decoration: none;
+        }
+        .p_complementos_div{
+            width: 50vw;
+        }
+        .preco_complemento{
+            color: var(--Purplish-blue);
+            margin: 0px;
+            font-size: 4vw;
+            padding-left: 2vw;
+        }
+
+
+        /* aqui começa a estilização da quarta parte */
+        #container_finish{
+            background-color: hsla(206, 94%, 87%, 0.288);
+            border-radius: 8px;
+            
+        }
+        #finish_plan{
+            display: flex;
+            justify-content: space-around;
+            border-width:0px;
+            border-bottom: 2px;
+            border-image: linear-gradient(to right, rgb(214, 214, 214), rgba(128, 128, 128, 0.692),rgba(128, 128, 128, 0.692), rgb(214, 214, 214)) 1; 
+            border-style: solid;
+        }
+        #finish_plan > p {
+            color: var(--Marine-blue);
+            font-weight: bolder;
+            margin: 0px;
+            padding: 4vw;
+        }
+        #finish_addOns > div{
+            display: flex;
+            justify-content: space-around;
+        }
+        #finish_addOns > div > p{
+            color: rgba(128, 128, 128, 0.459);
+            margin: 0px;
+            padding: 4vw;
+        }
+        #finish_total{
+            display: flex;
+            background-color: white;
+            justify-content: space-around;
+        }
+        #finish_total > p{
+            color: rgba(128, 128, 128, 0.589);
+            margin: 0px;
+            padding: 5vw;
+        }
+
+
+
+        /*  */
+        #div_next{
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+        .return{
+            display: none;
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.589);
+            font-weight: bold;
+            border: 0px;
+        }
+        .botao{
+            background-color: var(--Marine-blue);
+        }
+        #footer_PC{
+            display: none;
+        }
+
+        #info_step{
+            display: block;
+        }
+        #plan_step{
+            display: none;
+        }
+        #add-ons_step{
+            display: none;
+        }
+        #finishing{
+            display: none;
+        }
+        

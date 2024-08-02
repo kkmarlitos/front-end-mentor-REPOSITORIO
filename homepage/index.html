@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="PC_style.css" media="screen and (min-width: 1300px)">
+    <title>Home Page</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+        <header>
+            <nav>
+                <img src="assets/images/logo.svg" alt="logo" class="padding">
+                <img src="assets/images/icon-menu.svg" alt="burguer-menu" onclick="abrir_menu()">
+            </nav>
+        </header>
+    
+        <main>
+            <section>
+                <div class="img"></div>
+                <div class="flex_section1">
+                    <h1>The Bright Future of Web 3.0?</h1>
+                    <div class="flex_section2">
+                        <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling  its promise?</p>
+                        <a href="#" target="_blank" rel="external" class="hover">READ MORE</a>
+                    </div>
+                </div>
+            </section>
+
+            <article>
+                <h2>New</h2>
+                <h3>Hydrogen VS Electric Cars</h3>
+                <p>Will hydrogen-fueled cars ever catch up to EVs? </p>
+                <h3 class="border">The Downsides of AI Artistry</h3>
+                <p class="border">What are the possible adverse effects of on-demand AI image generation?</p>
+                <h3>Is VC Funding Drying Up?</h3>
+                <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+            </article>
+        </main>
+
+        <footer>
+                    <aside>
+                        <a href="#" class="de_fora">
+                                <img src="assets/images/image-retro-pcs.jpg" alt="reto-pc">
+                                <div>
+                                    <h4>01</h4>
+                                    <h5>Reviving Retro PCs</h5>
+                                    <p>What happens when old PCs are given modern upgrades?</p>
+                                </div>
+                        </a>
+                        <a href="#" class="de_fora">
+                            <img src="assets/images/image-top-laptops.jpg" alt="laptops">
+                            <div>
+                                <h4>02</h4>
+                                <h5>Top 10 Laptops of 2022</h5>
+                                <p>Our best picks for various needs and budget</p>
+                            </div>
+                        </a>
+                        <a href="#" class="de_fora">
+                            <img src="assets/images/image-gaming-growth.jpg" alt="PScontrol">
+                            <div>
+                                <h4>03</h4>
+                                <h5>The grouth of Gaming</h5>
+                                <p>How the pandemic has sparked fresh opportuinities</p>
+                            </div>
+                        </a>
+                    </aside>
+        </footer>
+        <div id="sidebar">
+            <img src="assets/images/icon-menu-close.svg" alt="close_menu" onclick="fechar_menu()">
+            <a href="#" class="hover2">Home</a>
+            <a href="#" class="hover2">New</a>
+            <a href="#" class="hover2">Popular</a>
+            <a href="#" class="hover2">Trending</a>
+            <a href="#" class="hover2">Categories</a>
+        </div>
+        
+        <script>
+            const sidebar = document.getElementById('sidebar')
+            const header = document.querySelector('header')
+            const main = document.querySelector('main')
+            const footer = document.querySelector('footer')
+            const article = document.querySelector('article')
+
+            function abrir_menu(){
+                sidebar.style.display = 'block' 
+                sidebar.style.filter = 'blur(0px)'
+                header.style.filter = 'blur(1px)'
+                main.style.filter = 'blur(1px)'
+                footer.style.display = 'none' 
+                article.style.display = 'none' 
+            }
+
+            function fechar_menu(){
+                sidebar.style.display = 'none'
+                header.style.filter = 'blur(0px)'
+                main.style.filter = 'blur(0px)'
+                footer.style.display = 'block' 
+                article.style.display = 'block' 
+            }
+
+        </script>
+</body>
+</html>

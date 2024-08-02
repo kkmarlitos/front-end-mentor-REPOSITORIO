@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+        *{
+            margin: 0px;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        :root{
+            --roxo_claro: hsl(270, 3%, 87%);
+            --roxo_escuro: hsl(279, 12%, 38%);
+            --roxo_escurao: hsl(278, 68%, 11%);
+            --linear1:hsl(249, 99%, 64%);
+            --linear2:hsl(278, 94%, 30%);
+            --erro: hsl(0, 100%, 66%);
+        }
+        header{
+            background-image: url(images/bg-main-mobile.png);
+            height: 20vh;
+            display: grid;
+            grid-template-rows: 17vw 5vw 17vw 40px;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+        .span_000{
+            padding-left:75vw;
+            color: white;
+            font-size: 3vw;
+        }
+        img{
+            width: 70vw;
+        }
+        #back{
+            padding-left: 25vw;
+        }
+        #front{
+            padding-left: 10vw;
+        }
+        div{
+            display: grid;
+            grid-template-columns: 170px 10px;
+            color: rgba(255, 255, 255, 0.849);
+        }
+        #num_cartao{
+            color: white;
+            padding-left: 14vw;
+            letter-spacing: 3px;
+            font-size: 4.2vw;
+        }
+        .span_cartao{
+            padding-left: 16vw;
+            font-size: 3vw;
+        }
+        main{
+            padding-top: 120px;
+            letter-spacing: 1px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        form{
+            padding-left: 40px;
+        }
+        input{
+            width: 70vw;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.459);
+            display: block;
+            font-size: 16px;
+            
+        }
+       .label{
+        color: black;
+        display: grid;
+        grid-template-columns: 180px 20px;
+        grid-template-rows: 8px;
+       }
+       .inp{
+        display: grid;
+        grid-template-columns: 20vw 25vw 50px;
+       }
+       .inp input{
+        width: 10vw;
+       }
+       #cvc{
+        width: 25vw;
+       }
+       #confirmar{
+        background-color: var(--roxo_escurao);
+        color: white;
+        width: 75vw;
+       }
+       #confirmar:hover{
+        padding: 10px;
+        background-color: var(--roxo_escuro);
+       }
+       h1.main_script{
+        font-size: 40px;
+        color: var(--roxo_escurao);
+        letter-spacing: 8px;
+        font-weight: 500;
+        text-align: center;
+       }
+       p.main_script{
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.356);
+        text-align: center;
+        letter-spacing: normal;
+       }
+       .erro{
+        color: var(--erro);
+        padding-bottom: 5px;
+       }
+       .img_complete{
+        width: 20vw;
+        display: block;
+        margin: auto;
+       }

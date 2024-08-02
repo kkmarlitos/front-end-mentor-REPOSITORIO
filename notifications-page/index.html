@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Notifications</title>
+  <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="PC_style.css" media="screen and (min-width: 1300px)">
+  <style>
+
+  
+  </style>
+</head>
+<body>
+
+<div id="container_index">
+        <div class="header">
+  
+          <h1>Creating Notifications</h1>
+          <a href="#">
+              <img src="assets/images/notifications_FILL0_wght400_GRAD0_opsz48.svg" alt="bell_notification" id="notificacao" onclick="abrir_notific()">
+          </a>
+  
+      </div>
+      <p id="fechar" onclick="fechar_notific()">X</p>
+      <div class="main">
+  
+          <h2>Escolha seu nome e o tipo de notificação dísponivel</h2>
+          <form autocomplete="off">
+  
+              <label for="nome">Nome do usuário: </label>
+              <input type="text" name="nome" id="nome">
+                  <br>
+              <label for="notific_reacoes">Reações</label>
+              <input type="radio" name="escolha_de_notific" id="notific_reacoes" value="notific_reacoes">
+                  <br>
+              <label for="novo_seguidor">Novo seguidor</label>
+              <input type="radio" name="escolha_de_notific" id="novo_seguidor" value="novo_seguidor">
+                  <br>
+              <label for="entrou_grupo">Entrou no grupo</label>
+              <input type="radio" name="escolha_de_notific" id="entrou_grupo" value="entrou_grupo">
+                  <br>
+              <label for="comentario">Comentario</label>
+              <input type="radio" name="escolha_de_notific" id="comentario" value="comentario">
+                  <br>
+              <label for="mensagem_privada">Mensagem privada</label>
+              <input type="radio" name="escolha_de_notific" id="mensagem_privada" value="mensagem_privada">
+                  <br>
+              <label for="saiu_grupo">Saiu do grupo</label>
+              <input type="radio" name="escolha_de_notific" id="saiu_grupo" value="saiu_grupo">
+                <br>
+                <h3>Fotos</h3>
+              <label for="angela_gray">Angela Gray</label>
+              <input type="radio" name="foto_perfil" id="angela_gray" value="angela">
+                <br>
+              <label for="anna_kim">Anna Kim</label>
+              <input type="radio" name="foto_perfil" id="anna_kim" value="anna">
+                <br>
+              <label for="jacob_thompson">Jacob Thompson</label>
+              <input type="radio" name="foto_perfil" id="jacob_thompson" value="jacob">
+                <br>
+              <label for="kimberly_smith">kimberly Smith</label>
+              <input type="radio" name="foto_perfil" id="kimberly_smith" value="kimberly">
+                <br>
+              <label for="mark_webber">Mark Webber</label>
+              <input type="radio" name="foto_perfil" id="mark_webber" value="mark">
+                <br>
+              <label for="rizky_hasanuddin">Rizky Hasanuddin</label>
+              <input type="radio" name="foto_perfil" id="rizky_hasanuddin" value="rizky">
+                <br>
+              <input type="button" value="Confirmar" class="confirmar" onclick="confirmar()">
+          </form>
+      </div>
+</div>
+
+
+        <section> 
+              <header>
+  
+                <h1>Notifications</h1>
+                <div class="quantidade_notific">0</div>
+                <p class="marcar_todas" onclick="visualizado_total()">Mark all as read</p>
+                
+              </header>
+          
+               <main> 
+              
+               </main>
+        
+        </section>
+
+
+        <script>
+          const notificacoes = document.querySelector('section')
+          const main_notific = document.querySelector('main')
+          const nome_usuario = document.getElementById('nome')
+          const fechar = document.querySelector('#fechar')
+          const total_notific_p = document.querySelector('div.quantidade_notific')  
+          let limpar_notific_array = []
+
+          let img_perfil
+          let div_notific
+          
+
+          //funções
+
+       
+          function confirmar(){
+            if (nome_usuario.value.length == 0 || nome_usuario.value.length > 30){//validando nome de usuário
+              window.alert('Ajeita esse nome ae')
+            }else{
+              criar_foto_perfil()
+              criar_notific_div()
+              limpar_notific_array.push(div_notific)
+              let total_notific = limpar_notific_array.length
+              total_notific_p.innerHTML = total_notific
+              
+            }}
+
+          function criar_notific_div(){
+          div_notific = document.createElement('div')
+
+          let escolha_notific = document.getElementsByName('escolha_de_notific')
+          let valor_notific = '' 
+
+          for(let i = 0; i < escolha_notific.length; i ++){ //validando radio
+              if (escolha_notific[i].checked){
+                valor_notific = escolha_notific[i].value
+              }
+          }
+
+          if (valor_notific == 'notific_reacoes'){ //escolhendo tipo de notific
+          div_notific.classList.add('notific_reacoes')
+          main_notific.appendChild(div_notific)
+          div_notific.appendChild(img_perfil)
+          div_notific.innerHTML += ` <p><strong class="nome">${nome_usuario.value}</strong> reacted to your recent post <b class="primeiro_torneio">My first tournament today!</b></p>`
+        
+
+          } else if (valor_notific == 'novo_seguidor'){
+             div_notific.classList.add('novo_seguidor')
+             main_notific.appendChild(div_notific)
+             div_notific.appendChild(img_perfil)
+             div_notific.innerHTML += `<p><strong class="nome">${nome_usuario.value}</strong> followed you</p>`
+
+           } else if (valor_notific == 'entrou_grupo'){
+             div_notific.classList.add('entrou_grupo')
+             main_notific.appendChild(div_notific)
+             div_notific.appendChild(img_perfil)
+             div_notific.innerHTML +=  `<p><strong class="nome">${nome_usuario.value}</strong> has joined your group <b class="chess_group">Chess Club</b></p>`
+ 
+           } else if (valor_notific == 'comentario'){
+             div_notific.classList.add('comentario')
+             main_notific.appendChild(div_notific)
+             div_notific.appendChild(img_perfil)
+             div_notific.innerHTML += `<p><strong class="nome">${nome_usuario.value}</strong> commented on your picture</p>
+            <img src="assets/images/image-chess.webp" alt="">`
+
+           } else if (valor_notific == 'mensagem_privada'){
+             div_notific.classList.add('mensagens_privada')
+             let mensagem_priv = window.prompt('Digite aqui sua mensagem')
+              if (mensagem_priv.length == 0){
+                while (mensagem_priv.length == 0){
+                mensagem_priv = window.prompt('Digite uma mensagem')}
+              }
+             main_notific.appendChild(div_notific)
+             div_notific.appendChild(img_perfil)
+             div_notific.innerHTML += `<p><strong class="nome">${nome_usuario.value}</strong> sent you a private mensage</p>
+            <div class="mensagem_privada">${mensagem_priv}</div>`
+            
+            }else if (valor_notific == 'saiu_grupo'){
+             div_notific.classList.add('saiu_grupo')
+             main_notific.appendChild(div_notific)
+             div_notific.appendChild(img_perfil)
+             div_notific.innerHTML += ` <p><strong>${nome_usuario.value}</strong> left the group <b>Chess Club</b></p>`
+
+           } else{
+            window.alert('Escolhe um ai')
+           }
+          }
+
+          function criar_foto_perfil(){
+            img_perfil = document.createElement('img')
+
+            let escolha_foto_perfil = document.getElementsByName('foto_perfil')
+            let valor_foto = ''
+              //validando radio
+            for(i = 0; i < escolha_foto_perfil.length; i ++){ 
+              if (escolha_foto_perfil[i].checked){
+                valor_foto = escolha_foto_perfil[i].value
+              }
+            }
+              //escolhendo foto
+            if (valor_foto == 'angela'){ 
+              img_perfil.src = 'assets/images/avatar-angela-gray.webp'
+              
+             } else if(valor_foto == 'anna'){
+               img_perfil.src = 'assets/images/avatar-anna-kim.webp'
+              
+            }else if (valor_foto == 'jacob'){
+            img_perfil.src = 'assets/images/avatar-jacob-thompson.webp'
+            
+           } else if (valor_foto == 'kimberly'){
+               img_perfil.src = 'assets/images/avatar-kimberly-smith.webp'
+               
+           }else if (valor_foto == 'mark'){
+               img_perfil.src = 'assets/images/avatar-mark-webber.webp'
+               
+           }else if (valor_foto == 'rizky'){
+              img_perfil.src = 'assets/images/avatar-rizky-hasanuddin.webp'
+    
+           }else{
+           window.alert('Escolhe um ai')
+          }
+          }
+
+          function visualizado_total(){
+            for(let c = 0;c < limpar_notific_array.length; c++ ){
+              limpar_notific_array[c].style.backgroundColor = 'var(--fundo)'
+            }
+            limpar_notific_array.length = 0
+            total_notific_p.innerHTML = limpar_notific_array.length
+
+          }
+
+           function abrir_notific(){
+            if(window.innerWidth <= 1300){
+             notificacoes.style.transform = 'translateX(20vw)'}
+             else{
+              notificacoes.style.display = 'block'
+             }
+             fechar.style.display = 'block'
+          }
+          
+           function fechar_notific(){
+            if(window.innerWidth <= 1300){
+             notificacoes.style.transform = 'translateX(100vw)'}
+             else{
+              notificacoes.style.display = 'none'
+             }
+             fechar.style.display = 'none'
+           }
+        </script>
+</body>
+</html>

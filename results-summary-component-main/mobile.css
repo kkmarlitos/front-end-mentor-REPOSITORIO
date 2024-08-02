@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Hanken Grotesk', sans-serif;
+
+}
+:root{
+  --vermelho: hsl(0, 100%, 67%);
+  --laranja: hsl(39, 100%, 56%);
+  --verde: hsl(166, 100%, 37%);
+  --blue: hsl(234, 85%, 45%);
+  
+  --azul_background: hsl(252, 100%, 67%);
+  --azul_claro_background: hsl(241, 81%, 54%);
+
+  --roxo_circulo: hsla(256, 72%, 46%, 1);
+  --azul_circulo: hsla(241, 72%, 46%, 0.014);
+}
+
+div#resultado{
+  background-image: linear-gradient(var(--azul_background), var(--azul_claro_background));
+  padding: 20px;
+  border-radius: 0px 0px 25px 25px;
+}
+h1{
+  text-align: center;
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.822);
+  padding-bottom: 20px;
+}
+div#circulo{
+  width: 30vw;
+  height: 20vh;
+  border-radius: 50%;
+  background-image:linear-gradient(var(--roxo_circulo), var(--azul_circulo)) ;
+  margin: auto;
+  
+}
+#acerto{
+  color: white;
+  text-align: center;
+  padding-top: 3vh;
+  font-size: 40px;
+}
+p.total{
+text-align: center;
+color: rgba(255, 255, 255, 0.575);
+
+}
+h3{
+color: white;
+text-align: center;
+padding-top: 20px;
+font-size: 22px;
+}
+div#paragrafo{
+border-radius: 0px;
+width: 280px;
+margin: auto;
+}
+p.para{
+color: rgba(255, 255, 255, 0.726);
+text-align: center;
+font-size: 17px;
+}
+h4{
+font-size: 20px;
+padding: 15px;
+}
+section{
+padding: 12px 10px 12px 10px;
+border-radius: 10px;
+position: relative;
+width: 90vw;
+margin: auto;
+}
+section.reacao{
+margin-bottom: 15px;
+color: var(--vermelho);
+background-color: hsla(0, 100%, 67%, 0.103);
+}
+section.memoria{
+margin-bottom: 15px;
+color: var(--laranja);
+background-color: hsla(39, 100%, 56%, 0.103);
+}
+section.verbal{
+margin-bottom: 15px;
+color: var(--verde);
+background-color: hsla(166, 100%, 37%, 0.103);
+}
+section.visual{
+margin-bottom: 30px;
+color: var(--blue);
+background-color: hsl(234, 85%, 45%, 0.103);
+}
+p.sumario{
+display: inline-block;
+position: absolute;
+}
+span{
+position: absolute;
+right: 5px;
+top: 2.2vh;
+}
+img{
+padding-left: 2px;
+padding-right: 5px;
+}
+div#nave{
+text-align: center;
+}
+a{
+background-color: hsl(224, 30%, 27%);
+color: white;
+text-decoration: none;
+padding: 10px 100px 10px 100px;
+border-radius: 20px;
+}
+a:hover{
+background-image: linear-gradient(to bottom,var(--azul_background), var(--azul_claro_background));
+}
+a#nave2{
+    display: none;
+}
+@media (min-height: 700px){
+#acerto{
+  padding-top: 5vh;
+}
+}
+@media (min-width:1380px){
+  
+}
